@@ -1,0 +1,139 @@
+<html lang="en" data-modal-type="agile-modal-m-small" data-modal-version="2">
+   <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <title>Popup</title>
+      <style>
+         body {
+            background-color: #fff;
+         }
+         #popup {
+         background: rgba(243, 48, 48, 0.5);
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         color: #555!important;
+         font: 13px/22px 'Helvetica Neue', Helvetica, Arial, sans-serif!important;
+         letter-spacing: 0;
+         padding: 8px;
+         text-align: center;
+         max-width: 380px;
+         margin: 0 auto;
+         }
+         #popup-body {
+         background: #fff;
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         }
+         #popup-content{padding: 20px;}
+         #popup-header {
+         background: #eee;
+         background-image: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+         background-image: -moz-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+         background-image: -o-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+         background-image: -ms-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+         background-image: linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));
+         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#e9e9e9');
+         -webkit-box-shadow: inset 0px -1px 0px #fff, 0px 1px 3px rgba(0,0,0,.08);
+         -moz-box-shadow: inset 0px -1px 0px #fff, 0px 1px 3px rgba(0,0,0,.08);
+         box-shadow: inset 0px -1px 0px #fff, 0px 1px 3px rgba(0,0,0,.08);
+         border-bottom:1px solid #bababa;
+         -webkit-border-radius: 5px 5px 0 0;
+         -moz-border-radius: 5px 5px 0 0;
+         border-radius: 5px 5px 0 0;
+         color: #444!important;
+         font-size: 14px!important;
+         font-weight: bold!important;
+         text-shadow: 0px 1px 0px #fff;
+         padding: 12px 25px;
+         }
+         #popup-content p  {
+         margin: 0 0 20px;
+         }
+         #popup-buttons a {
+         -webkit-border-radius:3px;
+         -moz-border-radius:3px;
+         border-radius:3px;
+         -webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.5), 0px 1px 2px rgba(0,0,0,.3);
+         -moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.5), 0px 1px 2px rgba(0,0,0,.3);
+         box-shadow: inset 0px 1px 0px rgba(255,255,255,.5), 0px 1px 2px rgba(0,0,0,.3);
+         color: #fff!important;
+         display: inline-block;
+         font-size: 13px!important;
+         font-weight: bold!important;
+         line-height: 33px!important;
+         margin: 0 2px 5px;
+         padding: 0 10px 0 34px;
+         position: relative;
+         text-decoration: none;
+         text-shadow: 0px 1px 0px rgba(0,0,0,.2);
+         }
+         #popup-buttons a:after {
+         content: ' ';
+         display: block;
+         height: 33px;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 33px;
+         }
+         #popup-button-ok {
+         background: -webkit-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+         background: -moz-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+         background: -o-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+         background: -ms-linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+         background: linear-gradient(top,  rgba(170,212,79,1) 0%,rgba(116,185,49,1) 90%,rgba(106,173,45,1) 95%,rgba(96,157,41,1) 100%);
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aad44f', endColorstr='#609d29',GradientType=0 );
+         border: 1px solid #5b8821;
+         }
+         #popup-button-ok:after {
+         background: url('https://gdurl.com/PiX0');
+         }
+         #popup-button-no {
+         background: -webkit-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+         background: -moz-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+         background: -o-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+         background: -ms-linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+         background: linear-gradient(top,  rgba(248,114,136,1) 0%,rgba(243,71,85,1) 90%,rgba(225,65,77,1) 95%,rgba(206,59,70,1) 100%);
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f87288', endColorstr='#ce3b46',GradientType=0 );
+         border:1px solid #b0333e;
+         }
+         #popup-button-no:after {
+         background: url('https://gdurl.com/njCG');
+         }
+         #popup-footer {
+         color: #fff !important;
+         font: bold 10px/10px "Montserat", Arial, Helvetica,
+         sans-serif !important;
+         letter-spacing: 1px;
+         padding: 8px 0;
+         text-align: right;
+         text-transform: uppercase;
+         /*display: none;*/
+         }
+
+         #popup-footer a {
+         color: #fff;
+         text-decoration: none;
+         }
+          @media (max-width:480px) {
+            #popup-header{font-size: 12px!important;}
+            #popup-content p{    font: 12px/18px 'Helvetica Neue', Helvetica, Arial, sans-serif!important;}
+          }
+      </style>
+   </head>
+   <body>
+<div id="popup">
+<div id="popup-body">
+<div id="popup-header">Are you sure you want to Sign Up?</div>
+<div id="popup-content">
+<p>Clicking yes you agree to Sign Up our Newsletters . Seriously, have you thought this through?</p>
+<div id="popup-buttons"><a href="https://github.com/Porocoder" id="popup-button-ok">Yes, Signup now!</a> <a href="https://github.com/Porocoder" id="popup-button-no">No, I'm insane!</a></div>
+</div>
+</div>
+</div>
+<div id="popup-footer">
+<div id="poroco-copyright">Powered by <a href="https://github.com/Porocoder" target="_blank" rel="nofollow noopener">Ibrahim BhuiYa</a></div>
+</div>
+</body>
+</html>
